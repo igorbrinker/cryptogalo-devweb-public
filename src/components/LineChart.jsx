@@ -21,11 +21,11 @@ const LineChart = ({ coinHistory, currentPrice, coinName }) => {
     labels: coinTimestamp,
     datasets: [
       {
-        label: 'Preço em Dólar Americano',
+        label: 'Preço em Dólar Americano (USD)',
         data: coinPrice,
         fill: false,
-        backgroundColor: '#0071bd',
-        borderColor: '#0071bd',
+        backgroundColor: '#005db4',
+        borderColor: '#005db4',
       },
     ],
   };
