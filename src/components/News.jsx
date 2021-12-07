@@ -12,9 +12,9 @@ const { Text, Title } = Typography;
 const { Option } = Select;
 
 const News = ({ simplified }) => {
-  const [newsCategory, setNewsCategory] = useState('Cryptocurrency');
+  const [newsCategory, setNewsCategory] = useState('Criptomoeda');
   const { data } = useGetCryptosQuery(100);
-  const { data: cryptoNews } = useGetCryptoNewsQuery({ newsCategory, count: simplified ? 6 : 12 });
+  const { data: cryptoNews } = useGetCryptoNewsQuery({ newsCategory, count: simplified ? 6 : 100 });
 
   if (!cryptoNews?.value) return <Loader />;
 
@@ -25,12 +25,12 @@ const News = ({ simplified }) => {
           <Select
             showSearch
             className="select-news"
-            placeholder="Select a Crypto"
+            placeholder="Selecione uma Moeda"
             optionFilterProp="children"
             onChange={(value) => setNewsCategory(value)}
-            filterOption={(input, option) => option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0}
+            filterOption={(input, option) => option.toLowerCase().indexOf(input.toLowerCase()) >= 0}
           >
-            <Option value="Cryptocurency">Cryptocurrency</Option>
+            <Option value="Cryptocurency">Criptomoeda</Option>
             {data?.data?.coins?.map((currency) => <Option value={currency.name}>{currency.name}</Option>)}
           </Select>
         </Col>

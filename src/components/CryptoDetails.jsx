@@ -43,9 +43,9 @@ const CryptoDetails = () => {
     <Col className="coin-detail-container">
       <Col className="coin-heading-container">
         <Title level={2} className="coin-name">
-          {data?.data?.coin.name} ({data?.data?.coin.slug}) Price
+          Detalhes sobre {data?.data?.coin.name} ({data?.data?.coin.slug})
         </Title>
-        <p>{cryptoDetails.name} preço atualizado em tempo real (USD). Veja os valores estatísticos, market cap e supply.</p>
+        <p>Preço da moeda {cryptoDetails.name} atualizado em tempo real (USD). Veja os valores estatísticos, market cap e supply.</p>
       </Col>
       <Select defaultValue="7d" className="select-timeperiod" placeholder="Select Timeperiod" onChange={(value) => setTimeperiod(value)}>
         {time.map((date) => <Option key={date}>{date}</Option>)}

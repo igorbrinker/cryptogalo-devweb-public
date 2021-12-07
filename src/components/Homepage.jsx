@@ -22,7 +22,7 @@ const Homepage = () => {
       <Row gutter={[32, 32]}>
         <Col span={12}><Statistic title="Total de Criptomoedas" value={globalStats.total} /></Col>
         <Col span={12}><Statistic title="Total de Corretoras" value={millify(globalStats.totalExchanges)} /></Col>
-        <Col span={12}><Statistic title="Total de Market Cap:" value={`$${millify(globalStats.totalMarketCap)}`} /></Col>
+        <Col span={12}><Statistic title="Total de Market Cap" value={`$${millify(globalStats.totalMarketCap)}`} /></Col>
         <Col span={12}><Statistic title="Total de volume em 24h" value={`$${millify(globalStats.total24hVolume)}`} /></Col>
         <Col span={12}><Statistic title="Total de Ações" value={millify(globalStats.totalMarkets)} /></Col>
       </Row>
