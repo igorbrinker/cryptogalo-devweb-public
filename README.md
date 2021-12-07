@@ -1,6 +1,6 @@
 **FOLLOW THE INSTRUCTIONS FOR THE APPLICATION BEST PERFORMANCE**
 ```
-npm i (to instal dependencies)
+npm i (to install dependencies)
 
 npm run build (to build the project)
 
